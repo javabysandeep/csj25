@@ -1,0 +1,119 @@
+Monday: 22 August  2022 8 AM- 10 AM
+
+Class: It is an keyword in java which is used to create a Class[classification]
+Class came from classification which stands for grouping,
+It is a blueprint, template, structure, layout, guidelines to create an object
+Floor plan —> Building
+Class —> Object
+Each class has name, attributes, behaviour
+
+class ClassName {
+	//attributes, state, variables, fields, columns, properties, feature
+	//behaviours, method, function, procedure, task, implementation, routine
+}
+——————
+Instance : It is an allocated memory space at runtime.
+Object: It is an instance of a class.
+		i.e. It is a memory space allocated for class type data.
+Every object is an instance. But vice versa need not be true.
+
+To create objects, first we need a class.
+
+How do mean by object creation?
+
+Why do we need Objects?
+- to represent real time logical & physical entities in the program
+
+How do we create an Object?
+- DerivedDataType referenceVariableName = new DervidedDataType();
+e.g. Movie movie = new Movie();
+	- Movie -  Derived data type
+	- movie - reference variable which holds the address or reference of an Object
+	- new : it is a keyword to create objects
+	- new Movie(); —> Object
+
+# Primitive variable : A variable which holds the direct value of type byte, short, int long, float, double, char, boolean
+	e.g. int rollNumber = 100;
+
+# Reference variable : A variable which holds the address or reference of an object
+		e.g. Movie movie = new Movie();
+		- movie is reference variable
+
+Class Components {
+	1. Variables
+		1. Instance
+			1. Primitive Instance Variable
+			2. Non-Primitive or Reference Instance variable
+		2. Static
+			1. Primitive Static Variable
+			2. Non-Primitive or Reference Static variable
+		3. Local
+			1. Primitive Local Variable
+			2. Non-Primitive or Reference Local variable
+
+	2. Methods
+		1. Instance methods
+		2. Static methods
+
+	3. Constructor
+		1. Default constructor
+		2. Zero param constructor
+		3. Parameterised constructor
+
+	4. Blocks
+		1. Instance block
+		2. Static block
+
+	5. Nested Classes
+		1. Inner classes or non-static nested classes
+		2. Static nested classes
+		3. Local Inner classes
+		4. Anonymous class
+
+}
+——————
+Why  do we need local variables?
+- To store data for temporary calculations in the program.
+	, int sum, avg, percentile
+
+Why  do we need instance variables?
+- To store data for object specific.
+	e.g. int rollNumber, studentName
+
+Why  do we need static variables?
+- S- Share- Static- Common
+- We use static variables to store common data for all the objects.
+e.g. college Name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
