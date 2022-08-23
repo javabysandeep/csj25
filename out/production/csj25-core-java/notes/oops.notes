@@ -1,5 +1,4 @@
-Monday: 22 August  2022 8 AM- 10 AM
-
+Session #3: Monday: 22 August  2022 8 AM- 10 AM
 Class: It is an keyword in java which is used to create a Class[classification]
 Class came from classification which stands for grouping,
 It is a blueprint, template, structure, layout, guidelines to create an object
@@ -85,11 +84,87 @@ Why  do we need static variables?
 - We use static variables to store common data for all the objects.
 e.g. college Name
 
+------------------------------------------------------------------------
+Tuesday: 23 August  2022 8:30 AM- 10 AM
+
+1. Compile Java file
+2.  load the .class files in the memory with the help of class-loaders.
+    - we have three different types of class-loaders
+    1. Bootstrap class loader
+    2. system class loaders
+    3. Extension class loader
+3. Java execution memory area is divided into different components:
+    - HEAP Memory area:
+        -We use heap memory to store objects and inside the object we have instance variables
+
+    - Java Method Execution Stack Memory Area:
+        - To store the local variables
+        - To maintain the java method execution
+        - At the end of program execution, stack will be empty.
+
+    - Class or Method Memory Area:
+        - To store static variables
+
+    - Native Method execution Memory Area:
+        - We use this space for non-java[native methods] methods execution
+
+    - Native Method Execution Stack Memory Area:
+              - To store the non-java method variables
+              - To maintain the native method execution
+              - At the end of program execution, stack will be empty.
+
+    - PC Register: It maintains the record of next instruction to be executed.
+
+    * Native method Interface : It loads the native methods from the Native method library into Native Method Area
+    * Native Method library: It has non-java methods
+------------------------------------------------------------------------
+ Variable Component in the class:
+ - What is a variable?
+    - It is a name give to a memory location address.
+    - We use variable to store the data or access the existing data
+
+# Based on the content of the variable:
+- Primitive Variable which holds the single value of predefined primitive type.
+    e.g. int age = 69;
+- Non-Primitive or Reference Variable which holds the address or reference of an object.
+    Student student = new Student();
+        - student is reference variable
+
+# Based on the usage and location of the variable
+1. Instance Variable:
+    What is it?
+     - It is an variable which stores the object specific information.
+     - It is created at class level, outside of all components but inside the class.
+     - it is also called as class level variables because they are created at class level outside of all methods, constructors, blocks
+
+    Why do we instance variables?
+     - To store the object specific information.
+
+    Where instance variables are stored?
+        - They are stored inside the heap memory are and will part of an object
+
+    How do we create instance variables?
+        class Student {
+            int rollNumber; // Primitive instance variable
+            String studentName; // Non-Primitive instance variable
+        }
+
+    When instance variables get the memory?
+    - When an object is created, then instance variables will be getting memory allocated.
+
+    When instance variables will be destroyed?
+    - When an object is destroyed.
+
+    How many times instance variables will be getting memory?
+        - Every time we create an object, instance variables will be getting the memory.
+
+    How do we access instance variables?
+        - We access instance variables with the help of reference variable.
 
 
-
-
-
+# Local Variables:
+- Variables which are created inside the method, constructor, blocks, method parameter, constructor parameter
+* Local variables wont get the default value. Developer is responsible for that
 
 
 
