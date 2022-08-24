@@ -137,7 +137,7 @@ Tuesday: 23 August  2022 8:30 AM- 10 AM
      - It is created at class level, outside of all components but inside the class.
      - it is also called as class level variables because they are created at class level outside of all methods, constructors, blocks
 
-    Why do we instance variables?
+    Why do we need instance variables?
      - To store the object specific information.
 
     Where instance variables are stored?
@@ -167,7 +167,69 @@ Tuesday: 23 August  2022 8:30 AM- 10 AM
 * Local variables wont get the default value. Developer is responsible for that
 - Local variables are local to the method/constructor/block.
 - They cant be accessed outside.
-- We use local variables for temporary calculations. 
+- We use local variables for temporary calculations.
+
+When local variables will get the memory?
+- When method/constructor/block is called.
+
+When local variables will be destroyed?
+- When method/constructor/block has completed the execution.
+
+** We don't need any reference variable or class name to access local variables.
+
+-----------------------------------------------------------------------------
+Static Variable:
+
+Q.1 What is it?
+     - It is an variable which stores the information/data which is common for all objects.
+     - It is created at class level, outside of all components but inside the class with the static keyword
+     - it is also called as class level variables because they are created at class level outside of all methods, constructors, blocks
+
+Q.2 Why do we need static variables?
+     - To store the information which is common for all the objects.
+
+Q.3. Where static variables are stored?
+        - They are stored inside the CLASS or Method memory.
+
+Q.4. How do we create static variables?
+        class Student {
+            static String collegeName; // Non-primitive static variable
+            static int studentCount; // primitive static variable
+        }
+
+Q.5. When static variables will get the memory?
+    - When a class is loaded into the memory, then static variables will be getting memory allocated.
+
+Q.6. When static variables will be destroyed?
+    - When an class is unloaded from the memory.
+
+Q.7. How many times static variables will be getting memory?
+     - Only once at the time of class loading into memory.
+
+Q.8. How do we access static variables?
+    - We access static variables with the help of class name.
+
+Q.9. Will static variables get the default values?
+     - They will get the default value.
+
+Q. 10. Can we create static variables inside the method/block/constructor?
+Ans. No. We can't. If we try to do it will give you CTE.
+
+Q. 11. Do we need object to be created to access static variables, static methods?
+Ans. No. We access static members with the help of class name.
+
+----------------------------------------------
+Method/Task/Behavior/Procedure/Routine/Implementation/Function/:
+
+Q.1. What is it?
+- It is a group of statements/instructions enclosed inside the curly braces which supposed to be perform specific task
+- Method can accept multiple, single or zero inputs
+- Method can return multiple, single or zero outputs
+- Method may or may not have names.
+
+
+
+
 
 
 
