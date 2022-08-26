@@ -227,6 +227,45 @@ Q.1. What is it?
 - Method can return multiple, single or zero outputs
 - Method may or may not have names.
 
+____________________________________________________________
+Questions on main method:
+1. Why main method is public?
+Ans. public is an keyword which is used specify the access for the class components.
+     pubic means this component can be accessed throughout the application.
+     So JVM can easily access the main method.
+
+2. Who calls main method and how many times?
+Ans. JVM calls main method only once
+
+3. How does JVM calls main method?
+Ans. Since main method is static, jvm calls the main method with the help of class name
+
+4. Why main method is static?
+Ans. -If main method is non-static then jVM has to creat object to call the main method.
+    - If the developer provides any constructor then default constructor will not be provided
+        - then this case JVM will be in confusion to which constructor to call to create object.
+    - So to avoid this confusion, main method is created as static.
+    - Now JVM no need to create the object, it can simply call the main method with the help of classname
+
+5. what can be changed in the  main method signature?
+Ans. - we can change the sequence of public static to static public
+    - main method parameter name can be changed.
+
+# void: it is a datatype that specifies nothing will be returned from the method
+# what is String[] args : This is an array of Strings which can be used by JVM to pass runtime arguments
+
+6. can we call main method explicitly?
+Ans. Yes. We call it with the help className.
+
+Q.7. Explain System.out.println();
+Ans.- System is a predefine class which contains out as a static variable which of type PrintStream
+      - We access static variable: System.out
+    - println() it is instance method present inside the PrintStream class.
+       - We access instance method System.out.println()
+
+Constructors:
+Q.1 What is a constructor?
+Ans:-
 
 
 

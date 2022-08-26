@@ -1,4 +1,4 @@
-package oops;
+package classComponents;
 
 public class LocalInstanceDemo {
     int a = 100;//instance variable

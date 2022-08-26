@@ -1,4 +1,4 @@
-package oops;
+package classComponents;
 
 public class Movie {
     // These are called as instance variables which will store movie object specific information

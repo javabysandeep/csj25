@@ -1,4 +1,4 @@
-package oops;
+package classComponents;
 
 public class Methods {
     void m1(){

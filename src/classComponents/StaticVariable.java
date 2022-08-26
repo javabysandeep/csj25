@@ -1,4 +1,4 @@
-package oops;
+package classComponents;
 
 public class StaticVariable {
     static int variable;// static primitive variable.
