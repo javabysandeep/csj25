@@ -265,9 +265,45 @@ Ans.- System is a predefine class which contains out as a static variable which 
 
 Constructors:
 Q.1 What is a constructor?
-Ans:-
+Ans:- It has same name as of class name with no return type no modifer.
 
+Q.2 Why do we use constructor?
+Ans. It is used to construct/build the object.
+     It is used to initialize the state of an object
+     It is used to specifically initialize the instance variables and not static variables not local variables
 
+Q.3. How do we access the constructor?
+Ans. While creating the object we give call to the constructor.
+        e.g. Feature feature = new Feature();
+        //Feature(); call to the constructor.
+
+Q.4 How do we create a constructor?
+Ans. class Feature {
+
+        Feature(){
+        //zero param constructor provided by developer.
+        }
+
+    }
+
+Q.5 Can we have the method in java which has same name as of class name?
+Ans. Yes. We can have either instance method or static method which has same name as of class name
+
+Q. 6. How do we call constructors explicitly?
+Ans. We can access constructor with the help of new keyword.
+    e.g. new Feature();
+
+Q.7 what are different types of constructor?
+Ans.
+1. Default constructor
+- It is provided by java compiler when no other constructor is provided by developer.
+- It wont hae any parameters and no implementation{ body is empty}
+
+2. zero parameterized
+- It is a constructor which does not accept the parameters and can have body.
+- It is provided by developer.
+
+3. parameterized
 
 
 
