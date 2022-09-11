@@ -1,0 +1,101 @@
+Polymorphism :
+- poly: many
+- morph : forms
+
+- It is an ability of an object to changes its behaviour either at compile time or run time.
+
+- Compile time polymorphism / static binding / early binding /
+    - we achieve compile time polymorphism with method overloading
+
+- Run time polymorphism / dynamic binding / late binding /
+    - we achieve run time polymorphism with method overriding
+
+What do you mean by object behaviour change?
+- Every object has
+    - state / fields / attributes / columns / variables / instance variables
+    - behaviour / method / function / procedure / implementation / task / instance methods / forms
+
+- Behaviour change means changing the method body by keeping method name same.
+------------------------------------------------------------------------------------------------------------
+
+Method overloading :
+- it is a process of defining multiple methods with same name and
+    different signature( either type of parameters or no. of parameters)
+
+- We can overload private methods
+- We can overload static methods
+- We can overload final methods
+- We can overload main method.
+- We can overload constructors.
+
+We do not consider return type for the method overloading.
+- In method overloading, call to the method is decided at compile time.
+
+** method overloading can happen in the same class as well as Parent- Child class
+
+Method overloading:
+    - We can define the method in the child class with the same name,
+     - but different signature as of Parent class method.
+
+------------------------------------------------------------------------------------------------------------
+Method overrding:
+    - It is a process of defining a method in the child class with the
+        - same name
+        - same signature
+        - same return type
+        as of Parent class method.
+class A{
+    void m1(){}
+}
+class B extends A{
+    void m1(){}
+}
+
+Why do we go with the method overrding?
+- If we are not happy with the parent class implementation
+
+Rules :
+    1. We can't override private methods
+    2. We can't override static methods
+    3. We can't override final methods
+    4. We can increase the method access specifier scop but can't do demotion
+        private > default > protected > public
+        e.g if parent class is having method visibility to public, then child class method must be public
+------------------------------------------------------------------------------------------------------------
+final keyword :
+- we can apply final keyword for variables, methods, class
+1. if a variable is final, we cannot reassign the value.
+2. if a method is final, we can't override it
+3. if a class final, we can't extend it.
+
+- If a reference variable is final, it means it will always point to the same object.
+- We can change the object content
+------------------------------------------------------------------------------------------------------------
+What is an Immutable class?
+- It is a class where once object is created we cannot change the content of an object.
+e.g. String, all wraper classes[Byte, Short, Integer, Character, Long]
+
+To make any class immutable,
+1. We make the class final
+2. we make the class members private
+3. We do not public setters.
+
+We can create the object of an immutable class
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
