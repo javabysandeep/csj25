@@ -67,7 +67,8 @@ final keyword :
 1. if a variable is final, we cannot reassign the value.
 2. if a method is final, we can't override it
 3. if a class final, we can't extend it.
-
+4. If instance variable are final, then they should initialized either in the same line or in the constructor.
+5. If static variable are final, then they should initialized either in the same line or in the static block.
 - If a reference variable is final, it means it will always point to the same object.
 - We can change the object content
 ------------------------------------------------------------------------------------------------------------
@@ -83,16 +84,47 @@ To make any class immutable,
 We can create the object of an immutable class
 ------------------------------------------------------------------------------------------------------------
 
+Concrete method : method which has implementation[body {}]
+Concrete class :
+    - A class which contains only concrete methods.
+    - A normal java class i.e. concrete class cannot have incomplete methods i.e. abstract methods
+    - If we write abstract method in a concrete class we ge CTE
 
+Abstraction : It is a process of exposing the functionality and hiding the implementation[method body] details.
+Q. How do we achieve abstraction?
+A. We achieve abstraction with the help of abstract class and interface.
 
+abstract method :
+    - A method which does not have method body and declared with the help of abstract keyword.
+         e.g. abstract void m1();
+    - an abstract method cannot be written inside the concrete class.
+    - We can define abstract method inside the abstract class or interface
+    - A method cannot be both abstract and final. Either It can be abstract or final not both
 
+# abstract class :
+- A class which is created with abstract keyword.
+- e.g, abstract class A {}
+- We use abstract class to define abstract methods.
+- It is optional to write abstract methods inside the abstract class or an interface.
+- we can have empty abstract class.
+- A class cannot be both abstract and final. Either It can be abstract or final not both
+- An abstract class can contain everything from concrete class + abstract methods
 
+Q. Can we create the object of an abstract class?
+A. No. By writing the abstract keyword, we tell compiler that it is an incomplete
+   So we can't create object even though class is empty.
 
+Q. Can we write main method inside the abstract class?
+A. We can write.
 
+Since we cannot create the object of an abstract class, how can we call abstract class constructor?
 
+-- When a concrete class extends another abstract class, then in the concrete class we must override abstract methods.
+- When one abstract class extends another abstract class, then it is optional for the child class to override abstract methods.
 
-
-
+Q. How can we call constructor of the abstract class?
+A. - Create a concrete subclass then create the object.
+   - From child class constructor, it will call abstract class constructor.
 
 
 
