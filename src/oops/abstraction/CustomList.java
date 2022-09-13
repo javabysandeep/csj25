@@ -28,4 +28,5 @@ public abstract class CustomList {
         System.out.println("main method in abstract class");
         //CustomList customList = new CustomList();
     }
+
 }

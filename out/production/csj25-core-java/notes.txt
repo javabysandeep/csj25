@@ -110,6 +110,24 @@ abstract method :
 - A class cannot be both abstract and final. Either It can be abstract or final not both
 - An abstract class can contain everything from concrete class + abstract methods
 
+Q. Can we create the object of an abstract class?
+A. No. By writing the abstract keyword, we tell compiler that it is an incomplete
+   So we can't create object even though class is empty.
+
+Q. Can we write main method inside the abstract class?
+A. We can write.
+
+Since we cannot create the object of an abstract class, how can we call abstract class constructor?
+
+-- When a concrete class extends another abstract class, then in the concrete class we must override abstract methods.
+- When one abstract class extends another abstract class, then it is optional for the child class to override abstract methods.
+
+Q. How can we call constructor of the abstract class?
+A. - Create a concrete subclass then create the object.
+   - From child class constructor, it will call abstract class constructor.
+
+
+
 
 
 
