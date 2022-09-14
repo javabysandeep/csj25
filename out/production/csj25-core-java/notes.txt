@@ -127,11 +127,28 @@ A. - Create a concrete subclass then create the object.
    - From child class constructor, it will call abstract class constructor.
 
 
+# Disadvantages with Abstract class:
+1. We can not achieve multiple inheritance
+2. We can not achieve 100% abstraction. Even though class is abstract there is not guarantee that it will have only abstract methods
 
+What is the use of abstract class?
+- to achieve abstraction[] hiding the implementation details and providing only functionality.
+------------------------------------------------------------------------------------------------------------
+interface :
+- it is a class which is fully unimplemented class.
+- this is a class which contains only abstract methods till java 7.
+- from java  8 onwards, interface can contain default and static methods as well.
 
+- By default all the variables in the interface are public static final
+- By default, all the methods in the interface are public abstract.
 
+In an interface, we cant have
+    - instance variables
+    - instance methods
+    - instance block
+    - constructor
 
-
+We achieve multiple inheritance with the help of interface.
 
 
 
