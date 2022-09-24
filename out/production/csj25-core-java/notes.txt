@@ -156,3 +156,153 @@ We achieve multiple inheritance with the help of interface.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abstract class : it is a class created with abstract keyword
+Why do we use abstract class? To write abstract methods
+To achieve abstraction.
+Abstract method : it is a method which is created without body and with abstract keyword
+We can write abstract method inside the abstract class and interface
+We can’t create the object of an abstract class interface as abstract stands for incomplete
+In an interface we can write all the components from an concrete class plus we can write abstract methods
+It is not compulsory to write abstract methods inside the abstract class as well as interface.
+abstract class MessageService {
+}
+We create the subclass and then create the object of subclass then eventually parent abstract class constructor will called.
+We can’t achieve multiple inheritance with abstract classes.
+We can’t achieve 100% abstraction as we can’t guarantee presence only abstract methods inside the abstract class.
+Abstract and final are opposite to each other.
+Class cannot be both final and abstract.
+Abstract methods are meant for giving override so they cannot be private, final, static
+# Interface : it is a fully unimplemented class.
+- It contains only abstract methods.
+- variables in the interface by default public static final
+- methods in the interface by default are public abstract
+- as part of an interface we can’t have instance
+	- instance variables,
+	- instance methods,
+	- constructors
+	- instance block
+	- inner classes
+	- static block
+These are not allowed because to we can achieve multiple inheritance with interfaces.
+One class implements another interface
+One class extends another class
+One interface extends another interface
+* when one concrete class extends an abstract class or implements an interface, then it is compulsory for the concrete class give override for all the abstract methods
+* when one one abstract class extends another abstract class or implements an interface then it is optional for the child abstract class to provide implementation
+We can’t create object of an abstract class as well as interface.
+# Types of interfaces
+1. Marker interface : it is an empty interface which is used to marking purpose at runtime
+	e.g. Serializable, Cloneable, Auto-closable
+2. Function interface :
+	- it is interface with only one abstract method. SAM
+	- As part of Java 8, functional interface can have any number of default and static methods.
+# default methods :
+- It is a method which defined inside the java 8 interface with method body and default keyword.
+- We use default methods for backward compatibility
+- If we introduce a new abstract method inside an interface, then all implementing subclass will break.
+- so avoid this, we make the newly introduced abstract method as default with method body. So subclass won’t
+# what are the different ways to implement interfaces and abstract class
+1. By creating separate concrete subclass by extending abstract class or implementing interface
+	abstract class A{}
+	class Ample extends A {}
+	interface I1{}
+	class I1Impl implements I1{}
+
+2. By using anonymous class.
+	A a = new A(){//body of the anonymous class};
+	I1 I = new I1(){};
+# What are the different ways to implement functional interface ?
+1. By using separate concrete subclass
+2. By using anonymous class
+3. By using Lambda expression.
+	interface MessageService (){
+	void sendMessage ();//SAM
+	}
+	 MessageService messageService = () -> {SOP(“sending message”)};
+# What is a lambda expression?
+- it is a new feature in java 8
+- it is a concise way of giving implementation of a function interface[SAM].
+- It is also called as anonymous function.
+- for lambda expression .class file will not be generated.
+syntax: FunctionalInterface typeName = (method Params) -> { method implementation};
+#Why we use lambda expression?
+- we use lambda expression to give implementation for functional interfaces only.
+- with lambda we can write concise code.
+
+What are predefined functional interfaces available in Java?
+- Runnable, Predicate, Function, Supplier, Consumer, UnaryOperator, BinaryOperator, BinaryConsumer, BiPredicate
+
+
+# Object:
+- It is super class for all the classes in java which are either pre-defined or going to be defined by the developer
+- It is called as cosmic class as Object class do not have any parent class
+- Object class is a concrete class which contains 11 methods:
+- All these methods are regular used to for all the classes.
+- All these methods are accessible for all the classes in java.
+# methods present in Object class:
+      # native methods[code is not written in java]
+      public final native java.lang.Class<?> getClass();
+      protected native java.lang.Object clone() throws java.lang.CloneNotSupportedException;
+      public native int hashCode();
+
+      public boolean equals(java.lang.Object);
+      public java.lang.String toString();
+      protected void finalize() throws java.lang.Throwable;
+
+     # Methods related to multi-threading
+      public final native void notify();
+      public final native void notifyAll();
+      public final native void wait(long) throws java.lang.InterruptedException;
+      public final void wait(long, int) throws java.lang.InterruptedException;
+      public final void wait() throws java.lang.InterruptedException;
+
+ # equals();
+ - it is a method originally present in Object class.
+ - It does the reference check.
+ - if reference are equal then it returns true otherwise false.
+ - It generally recommended to override equals method.
+ - if equals method is overriden then, always call will be given to the child class equals method and not object class
+
+# hashCode();
+- it is a method originally present in Object class.
+- hashing means converting a bigger value into a smaller value.
+- hashFunction takes the bigger a input and generates the hash[small value] for performance improvement
+- hashcode method returns a hash i.e. integer value.
+- it returns an integer value which is not a direct memory address but a hash calculated based on the original memory address of an object.
+- It generally recommended to override hashCode method.
+- if hashcode method is overriden then, always call will be given to the child class hashCode method and not object class
+
+***** equals and hashCode contract ***********************
+when we say two objects are equal by equals method then there hashCode must be same.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

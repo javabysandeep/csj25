@@ -246,10 +246,47 @@ What are predefined functional interfaces available in Java?
 - Runnable, Predicate, Function, Supplier, Consumer, UnaryOperator, BinaryOperator, BinaryConsumer, BiPredicate
 
 
+# Object:
+- It is super class for all the classes in java which are either pre-defined or going to be defined by the developer
+- It is called as cosmic class as Object class do not have any parent class
+- Object class is a concrete class which contains 11 methods:
+- All these methods are regular used to for all the classes.
+- All these methods are accessible for all the classes in java.
+# methods present in Object class:
+      # native methods[code is not written in java]
+      public final native java.lang.Class<?> getClass();
+      protected native java.lang.Object clone() throws java.lang.CloneNotSupportedException;
+      public native int hashCode();
 
+      public boolean equals(java.lang.Object);
+      public java.lang.String toString();
+      protected void finalize() throws java.lang.Throwable;
 
+     # Methods related to multi-threading
+      public final native void notify();
+      public final native void notifyAll();
+      public final native void wait(long) throws java.lang.InterruptedException;
+      public final void wait(long, int) throws java.lang.InterruptedException;
+      public final void wait() throws java.lang.InterruptedException;
 
+ # equals();
+ - it is a method originally present in Object class.
+ - It does the reference check.
+ - if reference are equal then it returns true otherwise false.
+ - It generally recommended to override equals method.
+ - if equals method is overriden then, always call will be given to the child class equals method and not object class
 
+# hashCode();
+- it is a method originally present in Object class.
+- hashing means converting a bigger value into a smaller value.
+- hashFunction takes the bigger a input and generates the hash[small value] for performance improvement
+- hashcode method returns a hash i.e. integer value.
+- it returns an integer value which is not a direct memory address but a hash calculated based on the original memory address of an object.
+- It generally recommended to override hashCode method.
+- if hashcode method is overriden then, always call will be given to the child class hashCode method and not object class
+
+***** equals and hashCode contract ***********************
+when we say two objects are equal by equals method then there hashCode must be same.
 
 
 
