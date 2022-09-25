@@ -290,14 +290,33 @@ when we say two objects are equal by equals method then there hashCode must be s
 
 
 
+# toString();
+- it is a method present Object class from java.lang package
+- it returns a string containing the
+    - classname: getClass().getName();
+    - @
+    - hexadecimal value of hashCode
+
+        public String toString() {
+            return getClass().getName() + "@" + Integer.toHexString(hashCode());
+        }
+ - toString method will be called implicitly when we print the reference.
+
+# finalize();
+- it is a method present in Object class.
+- this method does not have any implementation
 
 
+# garbage : any unused, unreferenced objects
+# garbage collector :
+    - It is a daemon thread[program] which is running in background.
+    - It cleans or frees the unused memory
+    - Before destroying the object it will call the finalize() method.
 
+- finalize() method will be called by garbage collector just before objects gets destroyed.
 
-
-
-
-
+How to call garbage collector explicitly?
+- System.gc();
 
 
 
