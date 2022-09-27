@@ -317,6 +317,68 @@ when we say two objects are equal by equals method then there hashCode must be s
 
 How to call garbage collector explicitly?
 - System.gc();
+--------------------------------------------------------------------------------------------------------------
+
+Problems before Array:
+1. if we want to store multiple values, we have to create that many variables.
+2. managing and accessing also all these variables will be difficult as they are not stored not sequentially.
+3. length of the code will increase.
+
+Requirement: To hold multiple values.
+1. create that many variables.
+2. use array
+
+# What is an Array?
+- it is data structure which helps us in storing data of same type in sequential manner.
+
+
+#Array declaration and initilization:
+int[] array;//delcration
+array = new int[5];//initilzation
+
+# when we create an array, an object is created inside the heap memory area and inside that object all the variables will be stored sequentially.
+e.g. int[] array = new int[5];
+    array : reference variable which points to an object
+    new int[5]: an object which stores 5 variables
+
+# Can we create an array with size zero?
+Ans. Yes we can do. int[] array = new int[0];
+    - array is created with zero elements.
+    - object is created but no  elements inside that.
+
+# Can we create an array with negative array size?
+Ans. if we create an array with negative size we get runtime exception.
+      NegativeArraySizeException
+
+# for every array, there will be one variable called length created.
+array.length
+
+# To access the array elements we use concept of index.
+- Array index starts from 0.
+- Array reference always points to the base address where first element is stored.
+- to access the array element: array[index].
+- Address of an array element = BASE Address + index * data type size;
+e.g. first element  = 100 + 0 *4; 100
+      second element = 100 + 1 * 4; 104
+
+If we try to access beyond the index, we get ArrayIndexOutOfBoundsException
+Index range : 0 to length-1;
+
+# Disadvantages:
+1. arrays are fixed in nature. once array is created with specified size then at run time we cant increase or decrease the space
+    -There will be either wastage or shortage of memory
+2. we cant store heterogeneous[of different data type] data.
+3. No built-in method support.
+    - For every programming requirement such as searching, sorting, reverse, delete, insert
+    developer is responsible.
+
+
+
+
+
+
+
+
 
 
 
