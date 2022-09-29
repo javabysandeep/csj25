@@ -2,7 +2,7 @@ package array;
 
 public class Demo14ArraySecondMaxElement {
     public static void main(String[] args) {
-        int[] array = {10,45,60,43,58};
+        int[] array = {61,45,60,43,58};
         System.out.println(secondMaxElement(array));
     }
 

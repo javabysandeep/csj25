@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Demo11ArrayEquality {
     public static void main(String[] args) {
         int[] array1 = {11, 32, 23, 4, 45, 69, 12};
-        int[] array2 = {11, 11, 11, 11, 11, 11,11};
+        int[] array2 = {1, 2, 13, 12, 25, 15,18};
 
         boolean isEqual = checkArrayEquality(array1, array2);
         System.out.println(isEqual);
