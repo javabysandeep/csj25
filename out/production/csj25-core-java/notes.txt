@@ -373,6 +373,42 @@ Index range : 0 to length-1;
     developer is responsible.
 
 
+------------------------------------------------------------------------------------------------------------------------
+            String Handling
+
+# character array:
+if we store strings with the help of char array,
+    - it is painful and complex, error-prone to store chars in single quotes.
+    - no method support for string manipulation. For every requirement developer is supposed to write code
+    - there will be either shortage or wastage of space
+
+# String
+* What is String class in Java?
+- it is predefined concrete final class present in java.lang package
+- String class implements Serializable, Comparable, CharSequence
+- Since String class is final, we cant extend it.
+- String class is an immutable class.
+- Once String class object is created its object cannot be modified.
+
+* Why to use String class?
+-  It is used to store group characters.
+-  String class uses array of characters to store this.
+- String class provides a lot of built-in methods for character manipulation.
+
+* How to use String class?
+- we create the String object and start using string class methods
+    1. String str = new String("hello");
+    2. String strLiteral = "abc";
+
+* What are different ways to create String class objects?
+- There are two ways
+    1. using new keyword
+        e.g. String str = new String("hello");
+    2. using literal way
+        e.g. String strLiteral = "abc";
+**** Creating objects using literal way is only possible for String class and not for any other class in entire java
+
+
 
 
 
