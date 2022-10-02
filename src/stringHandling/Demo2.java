@@ -10,5 +10,8 @@ public class Demo2 {
         String str4 = "abc";
         String str5 = "abc";
         String str6 = "abc";
+        System.out.println(str1.toString());
+        System.out.println(str1.equals(str2));
+        System.out.println(str1.length());
     }
 }

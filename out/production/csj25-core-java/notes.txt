@@ -409,6 +409,30 @@ if we store strings with the help of char array,
 **** Creating objects using literal way is only possible for String class and not for any other class in entire java
 
 
+What is the difference between creating the String objects using literal and new ?
+- using new keyword,
+    - objects will be created inside the heap memory without any object content check
+    - also objects will be created inside the SCP if object content is not present already.
+
+- using literal way
+    - objects won't be created inside the HEAP
+    - objects will be created inside SCP if the object is already not present
+    - if object is already present inside the SCP, no new object will be created, only reference to the existing object will be returned
+
+________________________________________________________________________________________________
+
+Exception Handling:
+
+# Exception:
+- It is an unwanted, unexpected event that disturbs the normal flow of the program.
+- When exception occurs rest of the code will not be executed.
+- program terminates abnormally.
+
+# What do you mean by exception handling?
+- it is a process of preventing the abnormal termination of the program.
+
+# What is default exception handling in java?
+-
 
 
 

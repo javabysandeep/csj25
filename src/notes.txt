@@ -419,6 +419,21 @@ What is the difference between creating the String objects using literal and new
     - objects will be created inside SCP if the object is already not present
     - if object is already present inside the SCP, no new object will be created, only reference to the existing object will be returned
 
+________________________________________________________________________________________________
+
+Exception Handling:
+
+# Exception:
+- It is an unwanted, unexpected event that disturbs the normal flow of the program.
+- When exception occurs rest of the code will not be executed.
+- program terminates abnormally.
+
+# What do you mean by exception handling?
+- it is a process of preventing the abnormal termination of the program.
+
+# What is default exception handling in java?
+-
+
 
 
 
