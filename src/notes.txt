@@ -433,13 +433,26 @@ Exception Handling:
 
 # What is default exception handling in java?
 -
+_______________________________________________________________________________________________________________________________________
+
+# Framework : It contains pre-defined code.
+# why to use framework:
+- it saves development efforts.
+- it will reduce the testing effort.
+- framework provides well written and thoroughly tested code
+- with the help of frameworks we can maintain uniform code.
+- with frameworks we can focus on business logic instead of writing code for algorithms
+    examples: Collection framework, Hibernate, Spring,
 
 
 
-
-
-
-
+# Collection framework:
+- it provides the pre-defined classes, interfaces, and methods[algorithms]
+- with the help of these classes we can easily manage group of objects.
+    - we can store single or multiple objects in the group of objects as a single unit
+    - we search single or multiple objects in the group of objects
+    - we can delete single or multiple objects in the group of objects
+    - sort
 
 
 
