@@ -453,10 +453,102 @@ ________________________________________________________________________________
     - we search single or multiple objects in the group of objects
     - we can delete single or multiple objects in the group of objects
     - sort
+    - search for a single object or multiple objects.
+
+Collection(I): it is the interface which contains common methods for all the containers
+
+List(I): It is an interface which extends Collection(I)
+- when we want to store the group of objects that can be of same type or different type as single unit unit
+- where objects can duplicate
+- insertion is maintained.
+- null insertion is possible as many as possible
+
+Q. What are the List implementation classes?
+- ArrayList, LinkedList, Vector, Stack
+
+Q. Explain ArrayList.
+- It is an implementation class of List(I)
+- It is present in java.util package
+- Internally it uses growable/dynamic array to store the group of objects as single unit
+    - growable array means, arrays will be resized.
+    - Once an array is fulled, new array is created with new capacity.
+    - content of old array is copied to new array
+    - New Capacity = Old Capacity + old capacity * 0.5 + 1;
+    - default initial capacity is 10.
+    - Is capacity and size are same?
+        - size represents how many objects are currently present.
+        - capacity  represents number objects that can be stored.
+- Since it uses array to store elements, elements are stored sequentially.
+- Elements can be accessed in O(1) time.
+- ArrayList methods are not synchronized.
+    -- multiple threads can access the methods without the concept of object/class lock
+
+- With the help of ArrayList we can store duplicate objects
+- insertion order is maintained
+- null insertion is possible
+- It is best to use when frequent operation is retrieval[reading/accessing] of data
+- It is worst to use when frequent operation is modification of data
+- Along with the collection and List methods, there some extra methods are available for array size and capacity management.
+****- ConcurrentModificationException , fail-fast, fail-safe
+
+Q. Explain Vector.
+- It is exactly same as ArrayList only difference is Vector methods are synchronized.
+- It is slower than ArrayList.
+- it is also called as Legacy.
+- It is not recommended to use.
+- It is recommended to use Synchronized ArrayList.
+
+Q. Explain Stack.
+- It is same as Vector and provides methods to implement Stack Data structure
+- It provides methods to implement Last-In-First-Out.
 
 
+---- ArrayList, Vector, Stack internally uses growable array
 
+Q. LinkedList
+- It is an implementation class of List(I)
+- It is present in java.util package
+- Internally it uses Doubly Linked List data structure.
+    - when new element has to be added it creates a new node and so on.
+- Since it uses DLL to store elements, elements are not stored sequentially.
+- Elements can be accessed in O(n) time.
+- LinkedList methods are not synchronized.
+    -- multiple threads can access the methods without the concept of object/class lock
 
+- With the help of LinkedList we can store duplicate objects
+- insertion order is maintained
+- null insertion is possible
+- It is best to use when frequent operation is modification of data
+- It is worst to use when frequent operation is retrieval[reading/accessing] of data
+- We do not have concept of capacity in LinkedList.
+_____________________________________________________________________________________________________________________________
 
+Wrapper classes :
+- Byte
+- Short
+- Integer
+- Long
+- Character
+- Float
+- Double
+- Boolean
+- these  8 classes present in java.lang package
+- and collectivity called as Wrapper classes.
+- For each primitive type there is corresponding wrapper is provided.
+- These wrapper classes are provided to wrap the primitive datatype into object format.
+- All these wrapper classes are immutable classes.
 
+## Auto-unboxing
+    - converting wrapper class object into primitive type
+    e.g. int i = new Integer("123");
 
+## Auto- Boxing
+    - converting primitive value into object format.
+    e.g. int a = 40;
+          Integer i = a;
+
+** Every wrapper class two sets of methods
+   - parseXXX : to convert string into primitive
+    e.g. parseInt, parseByte, parseShort, parseChar
+
+   - valueOf : to convert string into wrapper
