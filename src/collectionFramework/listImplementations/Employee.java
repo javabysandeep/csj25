@@ -1,6 +1,6 @@
 package collectionFramework.listImplementations;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
     int id;
     String name;
     int salary;
@@ -21,5 +21,12 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(Employee employee) {
+//        return this.salary-employee.salary;
+        return this.name.compareTo(employee.name);
     }
 }

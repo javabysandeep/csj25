@@ -21,7 +21,7 @@ public class RemoveDemo {
 //        integerList.remove(2);
 //        integerList.removeAll(deleteList);
 //        integerList.clear();
-        integerList.removeIf((integer) -> integer % 2 == 0);
+        integerList.removeIf((integer)->integer%2==0);
         System.out.println(integerList);
     }
 }

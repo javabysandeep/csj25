@@ -1,4 +1,4 @@
-package collectionFramework;
+package collectionFramework.listImplementations;
 
 import fileHandling.Student;
 

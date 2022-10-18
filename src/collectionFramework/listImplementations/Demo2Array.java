@@ -1,4 +1,4 @@
-package collectionFramework;
+package collectionFramework.listImplementations;
 
 public class Demo2Array {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package collectionFramework;
+package collectionFramework.listImplementations;
 
 class DynamicArray {
     int initialCapacity = 1;
