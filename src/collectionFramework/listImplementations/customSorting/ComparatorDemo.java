@@ -6,7 +6,18 @@ import java.util.Comparator;
 import java.util.List;
 
 public class ComparatorDemo {
+    {
+
+    }
+    void m1(){
+        {
+
+        }
+    }
     public static void main(String[] args) {
+        {
+
+        }
         Student student1 = new Student(101,"abc",78);
         Student student2 = new Student(1,"xyz",36);
         Student student3 = new Student(102,"pqr",98);
@@ -41,5 +52,6 @@ public class ComparatorDemo {
         });*/
 
         students.forEach(System.out::println);
+//        students.set()
     }
 }
