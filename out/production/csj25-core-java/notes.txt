@@ -552,3 +552,77 @@ Wrapper classes :
     e.g. parseInt, parseByte, parseShort, parseChar
 
    - valueOf : to convert string into wrapper
+_____________________________________________________________________________________________________________________________
+
+Set:
+- it is an interface present in java.util package
+
+Methods of Set(I):
+public interface java.util.Set<E> extends java.util.Collection<E> {
+  public abstract int size();
+  public abstract boolean isEmpty();
+  public abstract boolean contains(java.lang.Object);
+  public abstract java.util.Iterator<E> iterator();
+  public abstract java.lang.Object[] toArray();
+  public abstract <T> T[] toArray(T[]);
+  public abstract boolean add(E);
+  public abstract boolean remove(java.lang.Object);
+  public abstract boolean containsAll(java.util.Collection<?>);
+  public abstract boolean addAll(java.util.Collection<? extends E>);
+  public abstract boolean retainAll(java.util.Collection<?>);
+  public abstract boolean removeAll(java.util.Collection<?>);
+  public abstract void clear();
+  public abstract boolean equals(java.lang.Object);
+  public abstract int hashCode();
+  public java.util.Spliterator<E> spliterator();
+}
+
+
+What are the implementation of Set?
+- HashSet
+- LinkedHashSet
+- TreeSet
+
+When to use Set implementations?
+-  when we want to store group of unique objects as single unit
+
+When to use HashSet?
+- when we want to store group of unique objects as single unit
+- no insertion order
+- no sorting order.
+- we can store homogeneous as well as heterogeneous elements
+- we can insert only one null value
+
+When to use LinkedHashSet?
+- LinkedHashSet extends HashSet
+- when we want to store group of unique objects as single unit
+- There will be insertion order of objects will be maintained.
+- no sorting order.
+- we can store homogeneous as well as heterogeneous elements
+- we can insert only one null value
+
+When to use TreeSet?
+- when we want to store group of unique objects as single unit
+- There will be sorting order of objects will be maintained.
+- no insertion order.
+- In TreeSet, we can store only homogeneous elements
+- No null insertion is possible even once otherwise we get NullPointerException
+- For all the wrapper class objects sorting is enabled by default because
+    - all wrapper classes implments Comparable(I)
+
+* If we try to add custom objects in the TreeSet,
+    and if the objects are not of type Comparable
+    then we get exception ClassCastException
+
+Q. How HashSet and LinkedHashSet maintains the uniqueness of elements?
+- it uses equals and hashcode method for the uniqueness
+
+
+
+
+
+
+
+
+
+
