@@ -1,0 +1,328 @@
+#Introduction to Java
+    - What is Java
+        - high level programming language which is object oriented
+    - why java
+        - applications s/w
+            - desktop
+            - web app
+            - distributed or enterprise app
+        - WORA
+        - platform independent
+        - secure
+        - distributed
+        - multithreaded
+        - simple
+        - object oriented
+
+#Java Setup and Hello world program
+    - JDK[Java Development Kit]
+        - JDK helps in write, compile, run, debug the java program
+        - It is used by developer
+    - JRE [Java Runtime Engine/Environment]
+        - it helps in executing the java app
+        - it is used by end customer
+    - JVM [Java Virtual Machine]
+        - JVM is part of JRE
+    -JDK contains JRE & Compiler and some other libraries.
+    - JRE contains JVM.
+   * Steps to run first Java program:
+    1. download and install JDK from oracle.com/downloads
+    2. Set the path
+        - Path is a location to the bin files of JDK given to the OS
+        - We set the environment variables
+        - we need path to be set when we are using command prompt to compile java programs
+    3. Write program and save with .java extension
+    4. Go to the program directory and
+        - javac JavaFileName.java
+        - java ClassName
+
+# Understand first program:
+
+    class Hello {
+
+        public static void main(String[] args){
+
+            System.out.println("Hello World");
+
+        }
+
+    }
+  - class : it is keyword which is used to create class
+  - Hello: It is a class name also we call it as Identifier
+  - { : beginning of class definition
+  - } : end of class definition
+  - public :
+    - it is a keyword and access specifier/modifier
+     - which specifies the accessibility that main methods can be accessed throughout application
+  - static:
+     - it is a keyword and access specifier/modifier
+     - static method means it is common for all objects of the class
+     - to access static method we don't need to create object
+     - we can access static methods with the help of class name
+
+  - void :
+        - it is a keyword which has some predefined meaning
+        - it is a return type which means don't return any value from the method
+        - it is compulsory even though we don't return anything.
+  - main :
+        - it is the name of the method
+        - main method is the starting of the application
+        - JVM calls the main method only once automatically when the app is started
+
+  - (String[] args ):
+    - it is i/p to main method.
+    - group of strings [ array of strings]
+    - it is also called as command line arguments
+
+  - System.out.println("hello"):
+    - System is a predefined class
+    - out is a static variable of type PrintStream class defined inside System class
+    - println(): it is a method of PrintStream class which is used to print strings on console
+
+# How Java works?
+- we create java file
+- once we compile with java compiler we get byte code and it is stored inside the .class file
+- byte code is then given to JVM and then JVM converts it into binary code which understood by underlying machine
+
+# Identifiers:
+    - it is a name given to variable, methods, class, interface, packages
+    Rules:
+        - allowed characters a-z, A-Z, 0-9, _, $
+        - identifier should not start from digits
+        - don't use keywords as identifiers
+        - case-sensitive
+        -Naming convention
+            - variables, methods, packages : Lower camel case
+                    e.g. sendMessage();
+            - Classes, interfaces : Upper Camel Case
+                e.g. MessageService();
+        - Suggestions:
+            - don't use predefined classes as identifiers
+
+
+# Variable:
+    - it  is name given to memory location address.
+    - it is used to store data or access the already stored data
+    e.g. int variableName = 100;
+
+  # Types of variables:
+        - primitive variables:
+            - which stores primitive data
+            - int a =50;
+        - non-primitive or reference variables :
+            - which stores address or reference of an object
+             - String name = "hello";
+                name is reference variable
+
+
+ # Data types :
+    - it specifies type of data that variables stores
+    - it specifies the memory requirement
+    - it specifies the range of allowed values
+
+    different data types available
+    byte : size 1 byte , default value= 0
+    short : size 2 bytes , default value= 0
+    int : size 4 bytes , default value= 0
+    long : size 8 bytes , default value= 0
+    float : size 4 bytes , default value= 0.0f
+    double : size 8 bytes , default value= 0.0d
+    char : size 2 bytes , default value= ' '
+    boolean : size 1 byte , default value= false
+
+ Operators:
+ 1. Arithmetic :    +, -, *, /, %
+    - arithmetic operators are not applicable for boolean
+ 2. Comparison : >, <, >= ,<=, ==, != : output : boolean
+ 3. Logical : &&, ||, ^, ! &, |
+ 4. bitwise : &, |, <<, >>, >>>, ~, ^
+ 5. Ternary Operator: Conditional operator:
+    (op1) ? (op2) : (op3)
+ 6. assignment : =
+    - LHS must be variable
+    - RHS can be value, variable, expression, function call
+
+ 7. Increment- Decrement
+    - Pre, Post
+
+# Control statements
+    1. conditional
+        - if- else
+        - switch
+    2. looping
+        - for
+        - while
+        - do while
+        - for each
+    3. transfer
+        - break
+        - continue
+        - return
+
+# Java Architecture :
+- Java Compiler
+- Class Loader
+- Byte Code Verifier
+- Different memory compartments
+    - HEAP
+    - Stack
+    - Class or method memory area
+    - native method area
+    - native stack area
+    - PC registers
+- Native Method Interface
+- Native library
+- Execution engine
+
+# Class and Object:
+    - class: it is a keyword which is used to create a class
+    - class is template, blueprint, structure, design, set of guidelines to create objects
+    - class keyword came from classification[ categorization], grouping
+    - Class analogy : floor plan
+
+    * Object:
+        - instance is any allocated memory space at runtime
+        - Object is a memory allocated for class type data
+        - it is an instance of a class.
+        - object creation is nothing but memory allocation
+        - analogy: actual building
+        - we need class first to create object
+        - every object is an instance but vice versa need not be true
+
+# Class Components:
+    - Instance variables
+        - to store object specific information
+        - stored inside heap memory
+        - they get the memory once object is created
+        - every time we create the object  IV gets the memory
+        - instance variable are defined outside all components
+
+     - static variables
+        - to store common information for all the objects
+        - stored inside class memory
+        - they get the memory once class is loaded
+        - They get memory only once class is loaded
+        - static variable are defined outside all components with static modifier
+
+    - local variables
+        - to store temporary calculations
+        - stored inside stack memory area
+        - They get memory every time method is called
+        - local variable are defined inside a method, constructor, blocks, method parameters or constructor parameters.
+
+
+    - instance method:
+        - group of statements enclosed inside the curly braces which has name, return type, input parameters optional
+        - instance methods are object specific
+        - to access instance methods we need an object and reference
+    - static method:
+        - group of statements enclosed inside the curly braces which has name, return type, input parameters optional and static modifier
+        - static methods are common for all objects
+        - to access static methods we don't to create object we can with the help of class name
+
+# Constructor:
+    - it is special method which has
+        - same name as of class name
+        - no return type
+        - no access modifiers
+    - we use to initialize the state of an object[instance variables]
+  * default:
+    - no parameters
+    - no body
+    - provided by java compiler when no other constructor is provided
+
+  * zero param:
+    - no parameters
+    - we can provide the implementation if we want
+    - provided by java developer
+
+  * param :
+    - parameters
+    - we use to initialize instance variables with custom values
+    - provided by developer
+
+
+- instance blocks:
+    - block of code enclosed inside the curly braces which has no modifiers
+    - to perform non-initialization [ object counter, logging, auditing]
+    - instance blocks will be executed once object is created
+    - these are object specific
+
+- static blocks:
+    - block of code enclosed inside the curly braces with static modifier
+    - to perform non-initialization [ connection to the DB, ftp connection]
+    - static blocks will be executed only once when class is loaded
+    - these are common for all objects
+
+
+  Nested class:
+    1. inner class or non-static class: class defined inside another class
+    2. static nested class : class defined inside another class with static modifier
+    3. Local Inner class: class defined inside the method
+    4. anonymous class:
+        - it is class without name
+        - we combine class definition and object creation in single line
+        - we use to implement abstract class and interface.
+
+# OOPS:
+    1. Encapsulation
+    2. Inheritance
+    3. Polymorphism
+    4. Abstraction
+        - abstract class
+        - interface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
