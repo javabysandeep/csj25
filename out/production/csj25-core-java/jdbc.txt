@@ -1,0 +1,78 @@
+# Static block:
+    - it is a block of code which is executed only once at the time class loading
+    - To execute static block we need to load the class into the memory.
+    - To load the class into the memory we have two ways:
+        1. by creating object of a class
+            - in this way there will be confusion which constructor to call
+            - so to avoid this confusion we can use Class.forName()
+        2. by using Class.forName("completeClassNameWithPackage");
+
+# What is Database?
+    - it is a structured data stored physically on the file system.
+    - database can be present on local machine or remote machine
+    - to access database we need,
+           - URL of the database
+           - username and password
+           - port number on which database is available
+    - Types of Databases:
+        1. relational databases:
+            -data stored in rows and column
+            - no. Of columns are same for all the records/rows
+            -Mysql
+            -oracle
+            -postgres
+            - microsoft sql-server
+        2. NoSQl Databases
+            - data stored in document format
+            - no. Of columns are not same for all the records/rows
+            - mongodb
+            - cassendra
+            -redis
+# what is DBMS?
+    - DBMS stands for Database Management Systems/Software
+    - these systems helps in manipulating database files.
+        - we can create new database
+        - we can delete/drop database
+        - we can CRUD the tables inside the database
+    - DBMS provides the SQL[Structured Query Language] queries to work on DBMS
+
+# What is database client software?
+    - mysql workbench
+    -https://dev.mysql.com/downloads/workbench/
+
+
+# What is database server software?
+    - mysql community server software
+    https://dev.mysql.com/downloads/mysql/#:~:text=MySQL%20Community%20Edition%20is%20a,open%20source%20developers%20and%20enthusiasts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
