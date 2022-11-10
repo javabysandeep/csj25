@@ -45,6 +45,82 @@
     - mysql community server software
     https://dev.mysql.com/downloads/mysql/#:~:text=MySQL%20Community%20Edition%20is%20a,open%20source%20developers%20and%20enthusiasts.
 
+______________________________________________________________________________________________________________________________________________________________________________________
+
+
+Database Setup steps:
+
+1. Download and install Database server software
+    https://dev.mysql.com/downloads/mysql/#:~:text=MySQL%20Community%20Edition%20is%20a,open%20source%20developers%20and%20enthusiasts.
+        - user setup
+       - by default username will be root
+   - database server will be the owner of the databases
+   - DSS will manage
+
+2. Download and install Database client software
+    https://dbeaver.io/
+    or
+    we can use command prompt as a DB client software
+
+3. start the database server software
+
+4. Connect to the Database server software using DB client or command promt
+    export PATH=/usr/local/mysql/bin:$PATH
+    open the CMD and hit : mysql -u user_name -p and hit the enter
+     password
+    will be connected to the database server software
+
+
+5. We can give instructions to the server using client
+    - create new DB : create database DATABASE_NAME;
+    - see existing databases available: show databases;
+    - delete existing DB : drop database DATABASE_NAME;
+    - use database command and create the tables;
+    - to see the tables inside the database : show tables;
+    - create new table : create table student(id int, name varchar(50), address varchar(100));
+    - see the table structure: desc student;
+    - insert row/record into the table:
+        insert into student(name) values('pranav');
+        insert into student(id,name,address) values(1,'akash','pune');
+        insert into student values(2,'rohan','mumbai');
+
+    - check how many rows/records are there
+        select * from table_name;
+
+    - delete the rows
+            delete from student where id=1;
+
+    - drop the table
+        drop table student;
+
+    delete vs drop:
+        - delete will delete the content from table
+        - drop will delete the entire table from the given database;
+
+
+Before we execute these queries we have to connect to the database server:
+    mysql -u user_name -p password
+
+SQL queries:
+    create new database: create database db_name;
+    see all databases: show databases;
+    use the database : use db_name;
+    create the table: create able Table_Name(column_name, column_dataType);
+    see the structure of table: desc table_name;
+    insert new record in the table: INSERT INTO Table_Name (column_name) values (value);
+    see the records in the table: select * from table_name;
+    update record in the table : UPDATE table_name SET column_name = new_value WHERE column_name=value
+    delete all the records from table : delete from table_name;
+    drop the table from db : drop table table_name;
+
+
+
+
+
+
+
+
+
 
 
 
