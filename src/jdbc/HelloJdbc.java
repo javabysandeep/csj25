@@ -24,7 +24,7 @@ public class HelloJdbc {
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement statement = connection.createStatement();
         //execute the query
-        ResultSet resultSet = statement.executeQuery("select * from student");
+        ResultSet resultSet = statement.executeQuery("select * from student where id=3");
         //get the result
 
         while (resultSet.next()) {

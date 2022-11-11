@@ -113,10 +113,36 @@ SQL queries:
     delete all the records from table : delete from table_name;
     drop the table from db : drop table table_name;
 
+________________________________________________________________________________________________________________________
+
+database client software such as mysql workbench, db viewr, ------> database server
+command prompt/terminal --- > database server
+java app ---> DriverManager --> Driver ---> database server
 
 
+# Steps  to connect to database from java app:
 
+1. Load the Drivers[Implementation class provided by vendor] in the memory with the help of
+     - Class.forName("com.mysql.cj.jdbc.Driver");
+     - once this is loaded then the static block of the class is executed and it does Driver registration with DriverManager
 
+2. Register the driver with the DriverManager
+    Class.forName("com.mysql.cj.jdbc.Driver");//load & register the Driver
+
+3. Create the Connection
+    Connection connection = DriverManager.getConnection(url, un, pw);
+
+4. Execute the query
+    Statement statement = connection.createStatement();
+    ResultSet resultSet = statement.executeQuery("select * from student");
+
+5.   Use the Result
+    while(resultSet.next()) {
+        System.out.println(resultset.getInt("id"));
+    }
+
+6.  Close the connection
+        connection.close();
 
 
 
