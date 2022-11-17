@@ -26,7 +26,7 @@ public class CallableCallDemo {
         //get the connection
         Connection connection = DriverManager.getConnection(url, username, password);
         //call the stored procedure from the database
-        String query = "call product_proc";
+        String query = "call product_proc1";
 
         CallableStatement callableStatement = connection.prepareCall(query);
         callableStatement.execute();

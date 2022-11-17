@@ -23,14 +23,14 @@ public class CallableDemo {
         //get the connection
         Connection connection = DriverManager.getConnection(url, username, password);
         //call the stored procedure from the database
-        String query = "CREATE PROCEDURE product_proc() BEGIN\n" +
+        String query = "CREATE PROCEDURE product_proc1() BEGIN\n" +
                 "\tinsert into product(product_id, product_name)values(2,'p');\n" +
                 "\tinsert into product(product_id, product_name)values(3,'q');\n" +
                 "\tinsert into product(product_id, product_name)values(4,'r');\n" +
                 "\tinsert into product(product_id, product_name)values(5,'m');\n" +
                 "\tinsert into product(product_id, product_name)values(6,'n');\n" +
                 "\tinsert into product(product_id, product_name)values(7,'o');\n" +
-                "\tinsert into product(product_id, product_name)values(8,'p');\n" +
+                "\tdelete from product where product_id=6;\n" +
                 "    \n" +
                 "END;";
 
