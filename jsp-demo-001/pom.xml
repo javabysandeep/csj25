@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
-  <artifactId>mavenTest101</artifactId>
+  <artifactId>jsp-demo-001</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>mavenTest101 Maven Webapp</name>
+  <name>jsp-demo-001 Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -14,8 +14,16 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>4.0.3</version>
+      <scope>provided</scope>
+    </dependency>
+
   </dependencies>
   <build>
-    <finalName>mavenTest101</finalName>
+    <finalName>jsp-demo-001</finalName>
   </build>
 </project>

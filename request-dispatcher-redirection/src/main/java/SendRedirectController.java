@@ -5,10 +5,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalDateTime;
 
-@WebServlet(value = "/login", loadOnStartup = 0)
-public class LoginController extends HttpServlet {
+@WebServlet(value = "/sendRedirect", loadOnStartup = 0)
+public class SendRedirectController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
@@ -17,13 +16,12 @@ public class LoginController extends HttpServlet {
 
         if("abc".equalsIgnoreCase(username) && "abc".equalsIgnoreCase(password)){
             //success page
-            RequestDispatcher welcome = req.getRequestDispatcher("welcome");
-            welcome.forward(req,resp);
+            //new http request created and no data is sent
+           resp.sendRedirect("welcome");
         } else {
             //error page
-            RequestDispatcher error = req.getRequestDispatcher("login.html");
-            resp.getWriter().println("Invalid credentials");
-            error.include(req,resp);
+            resp.sendRedirect("https://www.google.com");
+
         }
 
     }
